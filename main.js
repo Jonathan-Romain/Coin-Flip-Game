@@ -7,9 +7,6 @@ document.querySelector('#flip').addEventListener('click', flipClicked);
 
 let userGuessResponse;
 
-let data = {
-    result: `heads`
-}
 
 function headsClicked(){
     userGuessResponse = "heads";
@@ -22,13 +19,12 @@ function tailsClicked(){
 }
 
 async function flipClicked(){
-    // const res = await fetch('/api');
-    // const data = await res.json();
+    const res = await fetch('/api');
+    const data = await res.json();
     if(userGuessResponse === data.result){
-        // document.querySelector('h1').innerText = `Your answer was ${userGuessResponse}` 
-        alert('you are here')
+        document.querySelector('h1').innerText = `You Win guessed ${userGuessResponse} and the result was ${data.result}`         
     } else{
-        document.querySelector('h1').innerText = `YOU LOSE!!!! Your answer was ${userGuessResponse}.`
+        document.querySelector('h1').innerText = `YOU LOSE!!!! Your answer was ${userGuessResponse} and the response was ${data.result}.`
     }
     console.log('flip');
 }

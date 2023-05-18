@@ -1,0 +1,13 @@
+section{
+    display: block;
+    margin: 0 auto;
+    padding: 20%;
+}
+
+button{
+    border-radius: 10px;
+    min-height: 70px;
+    min-width: 100px
+    
+}
+

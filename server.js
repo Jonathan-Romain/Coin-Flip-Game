@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
     if (page === '/') {
         serveHTML(req, res, 'index.html')
         
-    } else if (page === '/api') {
+    } else if (page === 'https://cfg-deploy.onrender.com/api') {
         let resultBinary = getRandomInt(2)
         console.log(resultBinary)
         let headsOrTailsResult = headsOrTails(resultBinary)
